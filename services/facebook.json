@@ -1,0 +1,30 @@
+{
+   "base_url" : "https://graph.facebook.com/",
+   "version" : "0.1",
+   "methods" : {
+       "current_user" : {
+           "path" : "/me",
+           "method" : "GET",
+           "authentication" : true
+       },
+       "current_home" : {
+           "path" : "/me/home",
+           "method" : "GET",
+           "authentication" : true
+       },
+       "get" : {
+           "path" : ":url",
+           "method" : "GET",
+           "authentication" : true,
+           "required_params" : [
+               "url"
+           ]
+       }
+   },
+   "expected_status" : [ 200 ],
+   "name" : "Facebook",
+   "authority" : "http://github.com/SPORE",
+   "meta" : {
+      "documentation" : "http://developers.facebook.com/docs/reference/api/"
+   }
+}
